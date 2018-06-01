@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Weather</title>
+    <link rel="stylesheet" href="resources/style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <nav id="navbar">
+            <h2 id="title-navbar">
+                <a href="#title">JS Weather</a>
+            </h2>
+            <input type="text" name="location" id="input-location" placeholder="Search location...">
+        </nav>
+
+        <main id="content-area">
+            <h1 id="title-main">Weather finder</h1>
+            <div id="user-interaction">
+                <p>Find weather:</p>
+                <div id="btn-location-container">
+                    <button id="current-location" class="btn-location">Where I am</button>
+                    <!-- <button id="other-location" class="btn-location">Somewhere else</button> -->
+                </div>
+                <div id="response-container">
+                    <h3 id="response-location"></h3>
+                    <p id="temperature"></p>
+                    <!-- <p id="weather-description">In <span id="span-location"></span> the weather is</p> -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="resources/script.js"></script>
+</body>
+
+</html>
