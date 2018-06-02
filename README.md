@@ -15,7 +15,7 @@ Only one JS file, structured upon a module pattern (data controller, ui controll
 
 
 
-///// Further possible stages /////
+----------- Further possible stages -----------
 
 v02) Addition of a second button to choose the location
 
