@@ -28,6 +28,10 @@ button {
     outline: none;
 }
 
+ul {
+    list-style: none;
+}
+
 /* ----- CONTAINER ----- */
 
 #container {
@@ -95,7 +99,7 @@ main {
 }
 
 #btn-location-container {
-    /* margin: 50px; */
+    margin: 25px 0 50px;
 }
 
 .btn-location {
@@ -115,4 +119,15 @@ main {
 
 .btn-location:active {
     /* create shadows and depression animation*/
+}
+
+/* ----- RESPONSE AREA ----- */
+
+#response-list {
+    padding: 100px;
+    width: 100%;
+}
+
+#response-list > * {
+    margin: 20px;
 }
