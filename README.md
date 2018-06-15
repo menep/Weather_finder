@@ -6,9 +6,9 @@ Current stage:
 
 Design and implementation of a weather app:
 
-- The user can click on a button, to get get info about the weather at his location
-
-- Once the button is clicked, the results (location, temperature, weather status, etc) are displayed in a div below the buttons
+- The user can write in an input field their desired location
+- "my location" returns weather results about their own location (obtained through geolocation api)
+- The results are displayed below the title
 
 Responsive but not optimized for small screens (below 500px)
 Only one JS file, structured upon a module pattern (data controller, ui controller, general controller)
@@ -17,10 +17,8 @@ Only one JS file, structured upon a module pattern (data controller, ui controll
 
 ----------- Further possible stages -----------
 
-v02) Addition of a second button to choose the location
+v02) Implementation of a way to see the forecast for the next few days
 
-v03) Implementation of a button to see the forecast for the next few days
+v03) Implementation of a map which shows the weather in the current area
 
-v04) Implementation of a map which shows the weather in the current area
-
-v05) Setting the background to a photo that reflects the current weather status
+v04) Setting the background to a photo that reflects the current weather status
