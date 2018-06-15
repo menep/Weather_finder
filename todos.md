@@ -1,0 +1,1 @@
+-   Correct container height (when window is resized, it shrinks)
