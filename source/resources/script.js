@@ -31,8 +31,8 @@ const dataController = (function() {
         let query;
 
         if (typeof input === "object") {
-            const lat = (input.latitude).toFixed(2);
-            const long = (input.longitude).toFixed(2);
+            const lat = input.latitude.toFixed(2);
+            const long = input.longitude.toFixed(2);
             query = `lat=${lat}&lon=${long}`;
         } else if (typeof input === "string") {
             query = `q=${input}`;
@@ -50,7 +50,17 @@ const dataController = (function() {
         xhr.send();
     };
 
-    const validateInput = function(input, uiCallback) {
+    const parseResponse = function(response, input) {
+        console.log(input);
+        const filtered = response
+            .filter(el => {
+                return el.name.toLowerCase().includes(input);
+            })
+            .slice(0, 10);
+        return filtered.map(el => el.name);
+    };
+
+    const validateWeatherInput = function(input, uiCallback) {
         if (input === "my location") {
             return locateUser(xhrWeather, uiCallback);
         } else {
@@ -59,8 +69,8 @@ const dataController = (function() {
     };
 
     return {
-        getResponse: function(input, uiCallback) {
-            validateInput(input, uiCallback);
+        getWeatherResponse: function(input, uiCallback) {
+            validateWeatherInput(input, uiCallback);
         }
     };
 })();
@@ -82,7 +92,7 @@ const uiController = (function() {
         return inputValue;
     };
 
-    const updateUi = function(response) {
+    const updateWeatherUi = function(response) {
         const html = `
             <ul id="response-list" class="response-centered">
                 <li id="response-description">${
@@ -105,7 +115,7 @@ const uiController = (function() {
     return {
         DOMElements,
         getInputValue,
-        updateUi
+        updateWeatherUi
     };
 })();
 
@@ -121,7 +131,7 @@ const generalController = (function(dataCtrl, uiCtrl) {
             .addEventListener("keyup", function(event) {
                 if (event.keyCode === 13) {
                     const input = uiCtrl.getInputValue();
-                    dataCtrl.getResponse(input, uiCtrl.updateUi);
+                    dataCtrl.getWeatherResponse(input, uiCtrl.updateWeatherUi);
                 }
             });
     };

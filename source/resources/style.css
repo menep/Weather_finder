@@ -14,6 +14,8 @@ html {
     font-family: "Open Sans", sans-serif;
     text-rendering: optimizeLegibility;
     height: 100vh;
+    color: #fff;
+    background-color: #f5b042;
 }
 
 :root {
@@ -34,9 +36,12 @@ ul {
     list-style: none;
 }
 
+::placeholder {
+    color: rgba(255, 255, 255, 0.541);
+}
 /* ----- CONTAINER ----- */
 
-#container {
+.container {
     width: 100vw;
     height: 100%;
 }
@@ -49,8 +54,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #20374d;
-    color: #fff;
 }
 
 #title-navbar {
@@ -72,6 +75,8 @@ main {
     display: flex;
     justify-content: center;
     position: relative;
+    height: 50%;
+    align-items: baseline;
 }
 
 #title-main {
@@ -85,9 +90,11 @@ main {
     font-size: 2em;
     font-weight: 300;
     font-style: italic;
+    color: inherit;
     margin-left: 2em;
     background-color: inherit;
     border: none;
+    border-bottom: 2px solid #fff;
 }
 
 /* ----- RESPONSE AREA ----- */
@@ -95,6 +102,8 @@ main {
 #response-container {
     width: 100%;
     height: 100%;
+    position: relative;
+    bottom: 20%;
 }
 
 #response-list {

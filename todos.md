@@ -1,1 +1,2 @@
--   Correct container height (when window is resized, it shrinks)
+- #title-area should initially be slightly above the center of the page
+- when the result is returned,  #title-area  should slide up and #response-list should be in the center
