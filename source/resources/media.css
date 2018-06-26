@@ -1,0 +1,18 @@
+@media (max-width: 1100px) {
+    #title-area {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #input-location {
+        margin: 0;
+
+    }
+}
+
+@media (max-width: 700px) {
+    #response-list {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
