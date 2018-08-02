@@ -79,9 +79,8 @@ const dataController = (function() {
 
 const uiController = (function() {
     const DOMElements = {
-        responseContainer: "#response-container",
-        inputLocation: "#input-location",
-        titleArea: "#title-area"
+        responseContainer: ".js-output__search-location",
+        inputLocation: ".js-input__search-location",
     };
 
     const getInputValue = function(e) {
@@ -94,7 +93,7 @@ const uiController = (function() {
 
     const updateWeatherUi = function(response) {
         const html = `
-            <ul id="response-list" class="response-centered">
+            <ul class="section-main__response-list">
                 <li id="response-description">${
                     response.weather[0].description
                 }</li>

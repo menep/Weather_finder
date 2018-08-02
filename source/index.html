@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
     <title>JS Weather</title>
-    <link rel="stylesheet" href="resources/style.css">
-    <link rel="stylesheet" href="resources/media.css">
+    <link rel='stylesheet' href='resources/style.css'>
+    <link rel='stylesheet' href='resources/media.css'>
 </head>
 
 <body>
 
-    <div class="container">
-        <nav id="navbar">
-            <h2 id="title-navbar">
-                <a href="#title">JS Weather</a>
-            </h2>
-        </nav>
+    <div class='container'>
 
-        <main id="content-area">
-            <div id="title-area">
-                <h1 id="title-main">Tell me what the weather is in: </h1>
-                <input type="text" name="location" id="input-location" placeholder="e.g. “my location”, “London”">
+        <header class='header'>
+            <nav class='header-navbar'>
+                <h2 class='header-navbar__heading'>
+                    <a href='#section-main' class='header-navbar__link'>JS Weather</a>
+                </h2>
+            </nav>
+        </header>
+
+        <section class='section-main' id='section-main'>
+            <div class='section-main__title'>
+                <label for='section-main__input' class='section-main__heading'>Tell me what the weather is in:</label>
+                <input type='text' placeholder='e.g. “my location”, “London”' class='section-main__input js-input__search-location' id='section-main__input'>
             </div>
-            <div id="response-container"></div>
-        </main>
+            <div class='section-main__response-container js-output__search-location'></div>
+        </section>
 
-        <section id="forecast"></section>
+
+        <section class='forecast'>
+            <div>
+                
+            </div>
+        </section>
     </div>
 
 
-    <script src="resources/script.js"></script>
+    <script src='resources/script.js'></script>
 </body>
 
 </html>
